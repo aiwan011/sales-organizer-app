@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Diese Schleife durchläuft die Aufgaben aus Supabase -->
+    <ion-item *ngFor="let task of tasks; let i = index">
+      <ion-label>{{ task.title }}</ion-label>
+      
+      <ion-button (click)="deleteTask(i)" color="danger" slot="end">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+      
+      <ion-button (click)="updateTask(i)" color="dark" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+      
+      <ion-button color="primary" slot="end">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Der blaue Hinzufügen-Button unten rechts -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addTask()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
