@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list-header>
+    <ion-label>App Theme</ion-label>
+  </ion-list-header>
+
+  <ion-radio-group [(ngModel)]="selectedTheme" (ionChange)="updateSettings()">
+    <ion-item>
+      <ion-radio value="blue">Blue Theme</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="red">Red Theme</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="brown">Brown Theme</ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-content>

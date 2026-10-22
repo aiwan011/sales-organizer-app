@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ taskData?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked" color="primary">Task Description</ion-label>
+    <p>{{ taskData?.text || 'No description provided.' }}</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked" color="primary">Assigned Details</ion-label>
+    <div style="margin-top: 10px;">
+      <!-- Customer Chip -->
+      <ion-chip color="secondary">
+        <ion-icon name="people"></ion-icon>
+        <ion-label>{{ taskData?.customer || 'None' }}</ion-label>
+      </ion-chip>
+      
+      <!-- Team Member Chip -->
+      <ion-chip color="tertiary">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>{{ taskData?.teammember || 'Unassigned' }}</ion-label>
+      </ion-chip>
+    </div>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button expand="block" color="danger" (click)="deleteTask()">
+      <ion-icon name="trash" slot="start"></ion-icon>
+      Delete Task
+    </ion-button>
+  </div>
+</ion-content>

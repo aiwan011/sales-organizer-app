@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let customer of customers" [routerLink]="['/selected-tasks', { category: 'customer', criteria: customer.name }]" routerDirection="forward">
+      <ion-label>{{ customer.name }}</ion-label>
+      
+      <!-- This Badge displays the task count for the customer -->
+      <ion-badge color="primary" slot="end">{{ customer.taskCount }}</ion-badge>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>
