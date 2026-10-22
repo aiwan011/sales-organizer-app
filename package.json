@@ -20,14 +20,20 @@
     "@angular/platform-browser": "22.1.7",
     "@angular/platform-browser-dynamic": "22.1.7",
     "@angular/router": "22.1.7",
+<<<<<<< HEAD
     "@capacitor/android": "8.5.2",
+=======
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
     "@capacitor/app": "8.1.2",
     "@capacitor/core": "8.5.2",
     "@capacitor/haptics": "8.0.2",
     "@capacitor/keyboard": "8.0.6",
     "@capacitor/status-bar": "8.0.4",
     "@ionic/angular": "^9.0.0",
+<<<<<<< HEAD
     "@ionic/storage-angular": "^4.0.0",
+=======
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
     "@supabase/supabase-js": "^2.117.3",
     "@types/lodash": "^4.17.26",
     "ionicons": "^8.1.0",

@@ -30,10 +30,13 @@ const routes: Routes = [
   {
     path: 'request',
     loadChildren: () => import('./pages/request/request.module').then( m => m.RequestPageModule)
+<<<<<<< HEAD
   },
   {
     path: 'settings',
     loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+=======
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
   }
 ];
 

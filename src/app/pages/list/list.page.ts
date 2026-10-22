@@ -3,6 +3,10 @@ import { AlertController } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { trash, create, arrowForward, add } from 'ionicons/icons';
 import { DataService } from '../../services/data.service';
+<<<<<<< HEAD
+=======
+import * as _ from 'lodash';
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
 
 @Component({
   selector: 'app-list',
@@ -27,8 +31,13 @@ export class ListPage implements OnInit {
 
   async loadTasks() {
     const rawData = await this.dataService.getTasks();
+<<<<<<< HEAD
     this.tasks = rawData.sort((a: any, b: any) => (a.title || '').localeCompare(b.title || ''));
     this.cdr.detectChanges();
+=======
+    this.tasks = _.sortBy(rawData, ['title']);
+    this.cdr.detectChanges(); // Forces Angular 22 to update the UI immediately!
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
   }
 
   async addTask() {
@@ -59,7 +68,11 @@ export class ListPage implements OnInit {
     await alert.present();
   }
 
+<<<<<<< HEAD
   async deleteTask(index: any) {
+=======
+async deleteTask(index: any) {
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
     const task = this.tasks[index];
     if (task && task.id) {
       await this.dataService.deleteTaskFromDb(task.id);
@@ -88,5 +101,9 @@ export class ListPage implements OnInit {
       ]
     });
     await alert.present();
+<<<<<<< HEAD
   }
 }
+=======
+  }
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76

@@ -9,12 +9,17 @@
 
 <ion-content>
   <ion-list>
+<<<<<<< HEAD
     <ion-item *ngFor="let customer of customers" [routerLink]="['/selected-tasks', { category: 'customer', criteria: customer.name }]" routerDirection="forward">
       <ion-label>{{ customer.name }}</ion-label>
       
       <!-- This Badge displays the task count for the customer -->
       <ion-badge color="primary" slot="end">{{ customer.taskCount }}</ion-badge>
       
+=======
+    <ion-item *ngFor="let customer of customers" routerLink="/list" routerDirection="forward">
+      <ion-label>{{ customer.name }}</ion-label>
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
     </ion-item>
   </ion-list>
 </ion-content>

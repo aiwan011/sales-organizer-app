@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController, AlertController, ToastController } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
 
+=======
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
@@ -9,6 +14,7 @@ import { DataService } from '../../services/data.service';
   standalone: false,
 })
 export class DetailsPage implements OnInit {
+<<<<<<< HEAD
   @Input() taskData: any;
 
   constructor(
@@ -53,5 +59,13 @@ export class DetailsPage implements OnInit {
       ]
     });
     await alert.present();
+=======
+  task: any;
+
+  constructor(private activatedRoute: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.task = this.activatedRoute.snapshot.params;
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
   }
 }

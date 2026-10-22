@@ -5,19 +5,28 @@
         <ion-list id="inbox-list">
           <ion-list-header>Organizer</ion-list-header>
           
+<<<<<<< HEAD
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+=======
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <!-- This line is fixed to use the standard icon name -->
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
               <ion-icon aria-hidden="true" slot="start" [name]="p.icon"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
           
+<<<<<<< HEAD
           <!-- About App Button -->
           <ion-item (click)="about($event)" lines="none" detail="false" button>
             <ion-icon aria-hidden="true" slot="start" name="information-circle"></ion-icon>
             <ion-label>About this app</ion-label>
           </ion-item>
           
+=======
+>>>>>>> 4f63c2e4a20a3a814b36a9da2640f5e89833eb76
         </ion-list>
       </ion-content>
     </ion-menu>
